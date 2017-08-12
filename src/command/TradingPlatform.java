@@ -1,7 +1,7 @@
 package command;
 
-public interface TradingPlatform {
-	public void setCommand(Command command);
-	public void invokeCommand(Command command);
-	public String getOrderState(Order order);
+public class TradingPlatform {
+	public String getOrderState(Order order) {
+		return order.getOrderStatus();
+	}
 }
