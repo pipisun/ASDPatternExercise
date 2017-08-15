@@ -14,10 +14,8 @@ public class ApplicationManager {
 	public void validateCreditCardInfoOperation(Command command, CreditCard card) {
 		this.currentCommand = command;
 		boolean isValidated = currentCommand.execute();
-		if(isValidated) {
-			commandsExecuted.push(currentCommand);
-		}
-		else {
+		commandsExecuted.push(currentCommand);
+		if(!isValidated) {
 			commandsExecuted.pop().undo();
 		}
 	}

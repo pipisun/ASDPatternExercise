@@ -21,7 +21,7 @@ public class Client {
 		
 		CreditCard card2 = new CreditCard("134", 1000);
 		Account acct2 = new Account(user);
-		card.setValidated(false);
+		card2.setValidated(false);
 		Command submitcommand2 = new SubmitCreditCardInfoCommand(acct2, card2);
 		am.validateCreditCardInfoOperation(submitcommand2, card2);
 	}
